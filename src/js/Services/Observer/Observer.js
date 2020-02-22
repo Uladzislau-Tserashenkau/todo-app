@@ -19,7 +19,7 @@ export default class Observer {
 
   broadcast (event, value) {
     if (!this.subscribers[event]) {
-      console.warn('Event is not supported!', event);
+      console.warn('Event is not supported at all!', event);
       return;
      }
     this.subscribers[event].forEach(cb => cb(value));
